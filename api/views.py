@@ -70,7 +70,6 @@ class LogoutView(APIView):
   def post(self, request):
     response = Response()
     response.delete_cookie("jwt")
-    print(tes)
     response.data = {
       'status': 1,
       'message': 'Logout success'
